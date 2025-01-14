@@ -123,3 +123,31 @@ img.socialIcon {
   height: 30px;
   width: 30px;
 }
+
+/* add an amazing spinning and bouncing animation to the social icons */
+img.socialIcon:hover {
+  animation: spin 1s linear infinite, bounce 1s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
